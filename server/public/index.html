@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/songsClient.js"></script>
+    <script src="scripts/foodClient.js"></script>
+    <script src="scripts/activitiesClient.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Song List</title>
+</head>
+  <body>
+    <section id="addSong">
+      <h2>Songs!</h2>
+        <input type="text" id="songNameIn" value="" placeholder="Song Name">
+        <input type="text" id="artistIn" value="" placeholder="Artists">
+        <input type="text" id="notesIn" value="" placeholder="Notes">
+        <button onclick="addSong(event)" type="button" id="addButton">Add Song</button>
+    </section>
+    <section>
+        <h3>Sort By:<button onclick="sortBy(event, 'songName')">Song Name</button><button onclick="sortBy(event, 'artist')">Artist</button><button onclick="sortBy(event, 'id')">Oldest</button></h3>
+      <table>
+        <thead>
+            <tr>
+                <th>Song Name</th>
+                <th>Artist</th>
+                <th>Comments</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="viewSongs">
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Favorite Foods</h2>
+        <input type="text" id="food" value="" placeholder="Food">
+        <input type="text" id="meal" value="" placeholder="Meal">
+        <button onclick="addFood(event)" type="button" id="addButton">Add Favorite Food</button>
+    </section>
+    <section>
+      <table>
+        <thead>
+            <tr>
+                <th>Food</th>
+                <th>Meal Time</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="viewFoods">
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
